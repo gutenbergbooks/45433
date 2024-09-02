@@ -1,0 +1,1871 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>S. W. PARTRIDGE CATALOGUE OF POPULAR ILLUSTRATED BOOKS, 1904</title>
+</head>
+<body>
+  <div class="document" id="s-w-partridge-catalogue-of-popular-illustrated-books-1904">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">S. W. PARTRIDGE CATALOGUE OF POPULAR ILLUSTRATED BOOKS, 1904</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container titlepage">
+      <div class="vspace" style="height: 4em"></div>
+      <p class="center pfirst"><span class="x-large">S. W. PARTRIDGE &amp; CO.<br />
+      CATALOGUE<br />
+      OF<br />
+      Popular<br />
+      Illustrated<br />
+      Books</span></p>
+      <p class="center pnext"><span class="medium">Classified according<br />
+      to Prices.</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">New Books and New Editions<br />
+      are marked with an Asterisk.</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">Published by<br />
+      S. W. PARTRIDGE &amp; CO.,<br />
+      8 &amp; 9, PATERNOSTER Row, LONDON, E.C.<br />
+      1904</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <p class="center pfirst"><em class="bold italics large">10s.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span>By FERRAR FENTON.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Complete Bible in Modern English. Incorporating the five volumes recently issued. Cloth extra, gilt top. Net. (For list of separate volumes, see page 7).</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">7s.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Holy Land in Geography and History. By Townsend McCoun, M.A. With 154 Coloured Maps and Plans. Two volumes (not sold separately). Crown 8vo. Cloth boards.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><em class="bold italics large">5s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span>By GEO. MANVILLE FENN.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*To Win or to Die. By George Manville Fenn. Large Crown 8vo. Illustrated. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sappers and Miners; or, The Flood Beneath the Sea. By G. Manville Fenn. Large Crown 8vo. Illustrated. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In the Mahdi's Grasp. By G. Manville Fenn. Illustrated by Lancelot Speed. Large Crown 8vo. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In Honour's Cause: A Tale of the Days of George the First. By G. Manville Fenn. Illustrated by Lancelot Speed. Large Crown 8vo. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Steve Young; or, The Voyage of the "Hvalross" to the Icy Seas. By G. Manville Fenn. Large Crown 8vo. Illustrated. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span>By ROBERT LEIGHTON.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cap'n Nat's Treasure: A Tale of Old Liverpool. By Robert Leighton, Author of "The Pilots of Pomona," etc. Eight Illustrations. Large Crown 8vo. Cloth.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span>By G. A. HENTY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cuthbert Hartington: A Tale of Two Sieges of Paris. By Geo. A. Henty. Large Crown 8vo. Six Illustrations. Cloth boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Scarlet Judges. By Eliza F. Pollard, Author of "A Hero King: A Romance of the Days of Alfred the Great," etc. Illustrated. Large Crown 8vo. Bevelled boards, gilt edges.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Two Protectors: Oliver and Richard Cromwell. By Sir Richard Tangye, K.B. With extracts from unpublished manuscripts and reproductions of original portraits in the collection of the Author. Demy 8vo. 300 pages. Cloth boards, gilt top. 38 Illustrations on Art Paper.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Two Babylons; or, The Papal Worship proved to be the Worship of Nimrod and his Wife. With 61 Illustrations from Nineveh, Babylon, Egypt, Pompeii, etc. By the late Alexander Hislop. Demy 8vo. Cloth extra.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">3s. 6d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span>By SILAS K. HOCKING.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Smoking Flax. By Silas K. Hocking, Author of "In Spite of Fate," etc. Large Crown 8vo. Twelve Illustrations. Cloth, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Old Wenyon's Will. By John Ackworth, Author of "Clogshop Chronicles," etc. Large Crown 8vo. Twelve Illustrations. 344 pages. Cloth, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>More than Money. By A. St. John Adcock, Author of "In the Image of God," etc. Twelve Illustrations. Large Crown 8vo. Cloth, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Those Berkeley Girls. By Lillias Campbell Davidson, Author of "Into a Far Country." Twenty-four Illustrations. Large Crown 8vo. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Awakening of Helena Thorpe. By E. Rentoul Esler, Author of "A Maid of the Manse," "The Wardlaws," etc. Large Crown 8vo. Eight Illustrations. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Parting of the Ways. By J. L. Hornibrook, Author of "In the Bonds of Silence." Twelve Illustrations. Large Crown 8vo. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Lion of Wessex; or, How Saxon fought Dane. By Tom Bevan, Author of "Dick Dale, the Colonial Scout." Large Crown 8vo. Eight Illustrations. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Among Hills and Valleys in Western China. By Hannah Davies. Demy 8vo. 326 pages. Fifty Illustrations from photos, and Large Map.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jungle and Stream; or, The Adventures of Two Boys in Siam. By G. Manville Fenn, Author of "Cormorant Crag," etc. Large Crown 8vo. Illustrated. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Hero King: A Romance of the Days of Alfred the Great. By Eliza F. Pollard, Author of "A Gentleman of England," "The White Dove of Amritzir," etc. Frontispiece. Gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Three-Cornered House. By the Author of "Everybody's Friend." Illustrated. Large Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Casque and Cowl: A Tale of the French Reformation. By F. M. Cotton Walker, Author of "The Lily and the Rose," etc. 364 pages. Four Illustrations. Large Crown 8vo. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Boy of the First Empire. By Elbridge S. Brooks. 332 pages. Six Illustrations. Large Crown 8vo. Cloth boards, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dick Dale; The Colonial Scout. A Story of the Transvaal War of 1899-1900. By Tom Bevan, Author of "White Ivory and Black," etc. Large Crown 8vo. 332 pages. Illustrated. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Lady of High Degree. By Jennie Chappell, Author of "Her Saddest Blessing," etc. Large Crown 8vo. Illustrated. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Gentleman of England. A Story of the Time of Sir Philip Sidney. By Eliza F. Pollard. Author of "The White Dove of Amritzir," "Roger the Ranger," etc. Large Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pilgrims of the Night. By Sarah Doudney. Frontispiece. Large Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Story of the Bible. Arranged in Simple Style for Young People. One Hundred Illustrations. Demy 8vo. Cloth extra, 3s. 6d. Gilt edges, bevelled boards, 4s. 6d.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Six Stories by "Pansy." Imperial 8vo. 390 pages. Fully Illustrated and Well-Bound in Cloth, with attractive Coloured Design on Cover, and Six Complete Stories in each Vol. 3s. 6d. each.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Through Fire and Storm: Stories of Adventure and Peril. By G. A. Henty, G. Manville Fenn, and John A. Higginson. Crown 8vo. 320 pages. Frontispiece. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Skeleton Reef: A Sea Story. By Hugh St. Leger. Large Crown 8vo. Frontispiece. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Pilgrim's Progress. By John Bunyan. Illustrated with 55 full-page and other Engravings, drawn by Frederick Barnard, J. D. Linton, W. Small, and engraved by Dalziel Brothers. Crown 4to. Cloth extra, 3s. 6d. Gilt edges, 5s.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Scuttling of the "Kingfisher." By Alfred E. Knight. Frontispiece. Large Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Missing Million: A Tale of Adventure in Search of a Million Pounds. By E. Harcourt Burrage. Frontispiece. Large Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Come, Break your Fast: Daily Meditations for a Year. By Rev. Mark Guy Pearse. 544 pages. Large Crown 8vo. Cloth extra.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">2s. 6d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">NEW SERIES OF BOOKS FOR GIRLS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">By Popular Authors. Large Crown 8vo. 332 pages, 6 illustrations.<br />
+    Handsomely bound in Cloth boards.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*A Girl's Battle. By Lillias Campbell Davidson.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*A Girl in a Thousand. By Edith Kenyon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Agnes Dewsbury. By Laura A. Barter-Snow.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Monica's Choice. By Flora E. Berry.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">"RED MOUNTAIN" SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*True Grit: A Story of Adventure in West Africa. By Harold Bindloss. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Yellow Shield; or, A Captive in the Zulu Camp. By William Johnston. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Firebrands of the Caspian: The Story of a Bold Enterprise. By F. M. Holmes. Illustrated.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Desert Scout: A Tale of Arabi's Revolt. By Wm. Johnston. Illustrated.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cormorant Crag: A Tale of the Smuggling Days. By G. Manville Fenn. Eight Illustrations by W. Rainey, R.I.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>One of the Tenth: A Tale of the Royal Hussars. By William Johnston. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Gold or Dross? By John W. Kneeshaw, Author of "Norcliffe Court," etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lost in the Slave Land; or, The Mystery of the Sacred Lamp Rock. By W. M. Graydon. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ice-Bound; or, The Anticosti Crusoes. By Edward Roper, F.R.G.S. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>On Winding Waters: A Tale of Adventure and Peril. By William Murray Graydon. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Under the Sirdar's Flag. By William Johnston, Author of "Tom Graham, V.C.," etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dorothy: The Coombehurst Nightingale. By E. M. Alford, Author of "Honor," etc. Frontispiece.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Boy from Cuba: A School Story. By Walter Rhoades, Author of "Two Scapegraces," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Fighting Lads of Devon; or, In the Days of the Armada. By Wm. Murray Graydon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Trip to Many Lands. By W. J. Forster. Illustrated with 26 full-page pictures. 4to. Cloth gilt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Adventures of Mark Paton. By Charles J. Mansford, Author of "Shafts from an Eastern Quiver," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Adventures of Don Lavington. By G. Manville Fenn.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>By Sea-Shore, Wood, and Moorland: Peeps at Nature. By Edward Step, Author of "Plant Life," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Crystal Hunters: A Boy's Adventures in the Higher Alps. By G. Manville Fenn.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Eagle Cliff: A Tale of the Western Isles. By R. M. Ballantyne, Author of "Fighting the Flames," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>England's Navy: Stories of its Ships and its Services. With a Glance at Some Navies of the Ancient World. By F. M. Holmes, Author of "Great Works by Great Men," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>First in the Field: A Story of New South Wales. By G. Manville Fenn. 416 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Grand Chaco. By the same Author. 416 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Great Works by Great Men: The Story of Famous Engineers and their Triumphs. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Lady of the Forest. By L. T. Meade, Author of "Scamp and I," "Sweet Nancy," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Loyal: A Story of the Mercantile Marine. By Arthur Collard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Norcliffe Court. By John W. Kneeshaw, Author of "A Black Shadow," "From Dusk to Dawn," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Roger the Ranger: A Story of Border Life among the Indians. By Eliza F. Pollard, Author of "Not Wanted," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Red Mountain of Alaska. By Willis Boyd Allen, Author of "Pine Cones," "The Northern Cross," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>True unto Death: A Story of Russian Life and the Crimean War. By Eliza F. Pollard, Author of "Roger the Ranger."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Two Henriettas. By Emma Marshall, Author of "Eaglehurst Towers," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Yashti Savage: The Story of a Gipsy Girl. By Sarah Tytler.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The White Dove of Amritzir: A Romance of Anglo-Indian Life. By Eliza F. Pollard.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="pfirst"><span class="bold">POPULAR WORKS BY MISS CHARLOTTE MURRAY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*From School to Castle. By Charlotte Murray. Illustrated. Large Crown 8vo. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Coral: A Sea Waif and her Friends. 268 pages. Six Illustrations. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Stuart's Choice; or, Castleton's "Prep." Crown 8vo. 288 pages. Six Illustrations. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Muriel Malone; or, From Door to Door. Illustrated. Crown 8vo. 272 pages. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Through Grey to Gold. Crown 8vo. 280 pages. Six Illustrations. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wardlaugh; or, Workers Together. (See under Home Library. 2s.)</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="pfirst"><span class="bold">FERRAR FENTON'S TRANSLATIONS OF THE HOLY SCRIPTURES<br />
+    IN MODERN ENGLISH. 2s. 6d. each Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Vol. I.--The Five Books of Moses.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Vol. II.--The History of Israel.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Vol. III.--The Books of the Prophets.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Vol. IV.--The Psalms, Solomon, and Sacred Writers.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Vol. V.--The New Testament.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Stories of Self-Help: Recent and Living Examples of Men Risen from the Ranks. By John Alexander, Author of "The Two Stephensons." Well Illustrated.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Young Man's Mind. By J. A. Hammerton, Author of "J. M. Barrie and His Books," etc. Crown 8vo. Cloth extra, gilt top.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Romance of The Bible. The Marvellous History of the British and Foreign Bible Society. By Charles F. Bateman, Author of "Dr. Clifford," etc. Crown 8vo. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Crown and Empire: A Popular Account of the Lives, Public and Domestic, of Edward VII. and Queen Alexandra. With Notes on some Memorable Coronations. By Alfred E. Knight, Author of "Victoria: Her Life and Reign," etc. Large Crown 8vo. 336 pages. Bound in handsome cloth boards, and containing 28 Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>My Dogs in the Northland. By Egerton R. Young, Author of "By Canoe and Dog Train," etc. 288 pages. Many Illustrations. Crown 8vo. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>From Stage to Cross: The Record of a Rolling Stone. By F. C. Vernon-Harcourt. Crown 8vo. 320 pages. Illustrated. 2s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Rulers: From William the Conqueror to Edward VII. By J. Alexander. Foolscap 4to. Cloth gilt. Sixty beautiful Illustrations. Attractively bound.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Great Siberian Railway: What I saw on my Journey. By Dr. F. E. Clark. Crown 8vo. 213 pages. Sixty-five First-class Illustrations on art paper, and a Map. Handsomely bound.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Chaplains at the Front. By One of Them. Incidents in the Life of a Chaplain during the Boer War, 1899-1900. By Owen Spencer Watkins, Acting Wesleyan Chaplain to His Majesty's Forces. With 44 excellent Illustrations, printed on art paper, from photographs, etc., taken on the field, and 3 Maps. Crown 8vo. 334 pages. Handsomely bound.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lord Roberts of Kandahar, V.C.: The Life-Story of a Great Soldier. By Walter Jerrold. Crown 8vo. Eight Illustrations. Handsomely bound in cloth boards. 2s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sir Redvers H. Buller, V.C.: The Story of His Life and Campaigns. By Walter Jerrold. Crown 8vo. 218 pages. With 8 Illustrations, 2s. 6d. net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Following Jesus: A Bible Picture Book for the Young. Size 13-1/2 by 10 inches. Contains 12 beautifully coloured Old and New Testament Scenes, with appropriate letterpress by D.J.D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Brought to Jesus: A Bible Picture Book for Little Readers. Containing 12 New Testament Scenes, printed in colours. Size 13-1/2 by 10 inches. Handsome coloured boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Pictures and Stories: Old and New Testament. In one Volume. Bound in handsome cloth, with 89 full-page Illustrations by Eminent Artists.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Light for Little Footsteps; or, Bible Stories Illustrated. With beautiful coloured Cover and Frontispiece. Full of Pictures. Size 13-1/2 by 10 inches.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Potters: their Arts and Crafts. Historical, Biographical, and Descriptive. By John C. Sparks and Walter Gandy. Crown 8vo. Copiously Illustrated. Cloth extra, 2s. 6d.; art linen, gilt edges, 3s. 6d.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Story of Jesus. For Little Children. By Mrs. G. E. Morton. Many Illustrations. Imperial 16mo.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Spiritual Grasp of the Epistles; or, An Epistle a-Sunday. By Rev. Charles A. Fox. Cloth Boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Upward and Onward. A Thought Book for the Threshold of Active Life. By S. W. Partridge. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Victoria: Her Life and Reign. By Alfred E. Knight. New edition, brought up to date. Crown 8vo. 384 pages. Cloth extra, 2s. 6d.; fancy cloth, gilt edges, 3s. 6d.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">2s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">THE HOME LIBRARY</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 320 pages. Handsome Cloth Covers.<br />
+    Artistically Illustrated.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Crag Island; or The Mystery of Val Stanlock. By W. Murray Graydon, Author of "The Fighting Lads of Devon," etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Wild Bryonie. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Edwin, the Boy Outlaw; or, the Dawn of Freedom in England. A Story of the Days of Robin Hood. By J. Frederick Hodgetts, Author of "Older England," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Manco, the Peruvian Chief. By W. H. G. Kingston. New Edition. Illustrated by Lancelot Speed.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Neta Lyall. By Flora E. Berry, Author of "In Small Corners," etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Robert Aske: A Story of the Reformation. By E. F. Pollard. Eight Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Burleigh's Sacrifice. By Mrs. Chas. Garnett. Nineteen Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Lion City of Africa. By Willis Boyd Allen. Sixteen Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Aveline's Inheritance. By Jennie Chappell, Author of "A Lady of High Degree." etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Around the Fire: Yule-tide Stories. By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ben-Hur. By L. Wallace.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Better Part. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Child of Genius. By Lily Watson.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cousin Mary. By Mrs. Oliphant. Author of "Katie Stewart."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dorothy's Training; or, Wild-flower or Weed? By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Fortune's Wheel. A South African Story. By Eliza F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Grace Ashleigh; or, His Ways are Best. By Mary D. R. Boyd.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Honor: A Nineteenth-Century Heroine. By E. M. Alford.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Her Saddest Blessing. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Inca's Ransom: A Story of the Conquest of Peru. By Albert Lee, Author of "The Black Disc," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John: A Tale of the Messiah. By K. Pearson Woods.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jacques Hamon; or, Sir Philip's Private Messenger. By Mary E. Ropes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Leaders into Unknown Lands: Being Chapters of recent Travel. By A. Montefiore-Brice, F.G.S., F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lights and Shadows of Forster Square. By Rev. E. H. Sugden, M.A.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Living it Down. By Laura M. Lane.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Last Earl Grahame. By Rev. J. M. Dryerre, LL.B., F.R.G.S., Author of "Heroes and Heroines of the Scottish Covenanters." Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>More Precious than Gold. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Martyr of Kolin: A Story of the Bohemian Persecution. By H. O. Ward.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Morning Dew-Drops: A Temperance Text Book. By Clara Lucas Balfour.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mark Desborough's Vow. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mick Tracy, the Irish Scripture Reader. By the Author of "Tim Doolan, the Irish Emigrant."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Norman's Nugget. By J. Macdonald Oxley, B.A. Author of "Archie Mackenzie," etc. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Puritan Wooing: A Tale of the Great Awakening in New England. By Frank Samuel Child.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Petrel Darcy; or, In Honour Bound. By T. Corrie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Polar Eden; or, The Goal of the "Dauntless." By Charles R. Kenyon, Author of "The Young Ranchman," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Strait Gate. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Spanish Maiden: A Story of Brazil. By Emma E. Hornibrook.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Tramp Ship's Fate: The Story of a Secret Commission. By F. M. Holmes. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Village Story. By Mrs. G. E. Morton, Author of "The Story of Jesus," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wardlaugh; or, Workers Together. By Charlotte Murray.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Wreck of the "Providence." By Eliza F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Alfred the Great: The Father of the English. By Jesse Page. Crown 8vo. 288 pages. Eight Illustrations. Cloth extra.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="pfirst"><span class="bold">LIBRARY OF STANDARD WORKS BY FAMOUS AUTHORS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. Bound in handsome cloth boards.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Melbourne House. By Susan Warner, Author of "The Wide, Wide World." 452 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Lamplighter. By Miss Cummins. 444 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Grimm's Fairy Tales. Carefully chosen from the Tales collected by the Brothers Grimm. Twelve Illustrations. 344 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Swiss Family Robinson: Adventures on a Desert Island. Twelve Illustrations. 400 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Tom Brown's School-Days. By an Old Boy. 344 pages. Twelve Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Women and Good Wives. By Louisa M. Alcott. 450 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Wide, Wide World. By Susan Warner. 478 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Danesbury House. By Mrs. Henry Wood. 332 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Stepping Heavenward. By E. Prentiss. 332 pages. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Halifax, Gentleman. By Mrs. Craik. New Edition. 540 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Life and Adventures of Robinson Crusoe. By Daniel Defoe.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Naomi; or, The Last Days of Jerusalem. By Mrs. Webb.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Pilgrim's Progress. By John Bunyan. 416 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Uncle Tom's Cabin. By Harriet Beecher Stowe.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Westward Ho! By Chas. Kingsley.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bunyan's Folk of To-day; or, The Modern Pilgrim's Progress. By Rev. J. Reid Howatt. Twenty Illustrations. Crown 8vo. Cloth extra.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sunday Afternoons with My Scholars. By J. Attenborough. With portrait. Crown 8vo. 290 pages. Cloth gilt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Light for Little Pilgrims. A Coloured Scripture Picture Roll. Contains 12 beautifully coloured Old and New Testament Scenes, with appropriate texts. Varnished cover printed in 10 colours. Mounted on Roller for hanging.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Twilight Whispers. For Devotional Moments. By J. O. Keen. Crown 8vo. 256 pages, with Portrait of the Author. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Platform, Pulpit, and Desk; or, Tools for Workers. Being 148 Outline Addresses on all Phases of the Temperance Movement for all Ages and Classes. By W. N. Edwards, F.C.S. With an Introduction by Canon Barker. Crown 8vo. 300 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pleasant Half Hours; or, Thoughts for Men. By Rev. E. H. Sugden. M.A., Author of "Lights and Shadows, etc." With a Preface by Rev. A. Plummer, M.A., D.D., Master of University College, Durham. Crown 8vo, 224 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Picture Roll. Containing a large Engraving of a Scripture Subject, with letterpress, for each day in the month.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Friends of Jesus: Illustrated Sketches for the Young of the Twelve Apostles, the Family at Bethany, and other of the earthly friends of the Saviour. Small 4to. Cloth extra.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Love, Courtship, and Marriage. By Rev. F. B. Meyer, B.A. Crown 8vo, 152 pages. Embellished cloth cover. 2s. Net. Full gilt edges, 2s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Crucifixion of Phillip Strong. By Chas. M. Sheldon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>His Brother's Keeper. By Chas. M. Sheldon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Exemplar; or, What would Jesus do? (In His Steps). By Chas. M. Sheldon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Richard Bruce. By Chas. M. Sheldon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Twentieth Door. By Chas. M. Sheldon.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">1s. 6d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">THRILLING BUT PURE!</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><span class="bold small">A series or Charming Stories for Holiday and Fireside Reading.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 760 pages. Well Illustrated and Attractively Bound.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*A String of Pearls. By E. F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Elsie Macgregor: or, Margaret's Little Lass. By Ramsay Guthrie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Lady of the Chine. By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Carola's Secret. By Ethel F. Heddle.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Home of his Fathers. By Lillias Campbell Davidson.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Great Patience. By L. Moberly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In the Bonds of Silence. By J. L. Hornibrook.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Late Repentance. By Hannah B. Mackenzie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Shepherds and Sheep. By E. Stuart-Langford.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Golden Doors. By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Noble Champion. By David Hobbs.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE UP-TO-DATE LIBRARY</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Of Thick Crown 8vo. Volumes. 320 pages. Many Illustrations.<br />
+    Cloth boards.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Avice: A Story of Imperial Rome. By E. F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The King's Daughter. By Pansy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Foster Brothers: or, Foreshadowed. By Mrs. Morton.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Household Angel. By Madeline Leslie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Green Mountain Boys: A Story of the American War of Independence. By E. F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Way in the Wilderness. By Maggie Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Miss Elizabeth's Niece. By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Man of the House. By "Pansy."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Olive Chauncey's Trust: A Story of Life's Turning Points. By Mrs. E. R. Pitman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Whither Bound; A Story of Two Lost Boys. By Owen Landor.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Three People. By "Pansy."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Chrissy's Endeavour. By "Pansy."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Young Moose Hunters. By C. A. Stephens.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Eaglehurst Towers. By Emma Marshall.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>More Nails for Busy Workers. By C. Edwards. Author of "A Box of Nails for Busy Christian Workers." etc. Crown 8vo. 196 pages. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Queen Alexandra: the Nation's Pride. By Mrs. C. N. Williamson. Crown 8vo. Tastefully bound, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>King and Emperor: The Life-History of Edward VII. By Arthur Mee. Crown 8vo. Cloth boards, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>William McKinley: Private and President. By Thos. Cox Meech. Crown 8vo. 160 pages, with Portrait. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Studies of the Man Paul. By Robert E. Speer. Long 8vo. 304 pages. Cloth gilt. 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Angel and the Demon; and other Stories. By E. Thorneycroft Fowler. Cloth gilt. Eight Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Measuring Eye. By E. Stuart-Langford, Author of "Miss Sophia's Repentance," etc. Illustrated. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wellington: The Record of a Great Military Career. By A. E. Knight. Crown 8vo. Cloth gilt, with Portrait, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Hector Macdonald; or, The Private who became a General. By T. F. G. Coates. Cr. 8vo. Cloth gilt, with Portrait. 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Baden-Powell: The Hero of Mafeking. By W. Francis Aitken. Crown 8vo. Cloth gilt, with Portrait, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Every-day Life in South Africa. By E. E. K. Lowndes. Crown 8vo. Illustrated. Cloth boards, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Royal Life. By Rev. J. C. Carlile. Crown 8vo. 128 pages. Cloth gilt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Insects: Foes and Friends. By W. Egmont Kirby, M.D., F.L.S. 32 pages of Coloured Illustrations. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Romance of Evangelism. By Rev. J. Flanagan, South-East London Mission. Crown 8vo. 128 pages. Cloth boards.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE BRITISH BOYS' LIBRARY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Fully Illustrated. Crown 8vo. 168 pages. Cloth extra.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Brown A1; or, A Stolen Holiday. By E. M. Stooke.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Pigeons' Cave: The Story of Great Orme's Head in 1806. By J. S. Fletcher.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Robin the Rebel. By H. Louisa Bedford.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Runaway Rollo. By E. M. Stooke.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Success: Chats about Boys who have Won it. By C. D. Michael.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Well Done! Stories of Brave Endeavour. Edited by C. D. Michael, Author of "Heroes All," "Deeds of Daring," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Wonder Seekers. By Henry J. Barker, M.A.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Soldiers. By Kate L. Mackley.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Will; or, That Boy from the Union. By Lydia Phillips.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Heroes All! A Book of Brave Deeds for British Boys. Edited by C. D. Michael.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Deeds of Daring; or, Stories of Heroism in Every-day Life. By C. D. Michael.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Noble Deeds: Stories of Peril and Heroism. Edited by C. D. Michael.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Armour Bright: The Story of a Boy's Battles. By Lucy Taylor, Author of "Astronomers and their Observations," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Thane of the Dean: A Story of the Time of the Conqueror. By Tom Bevan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Old Red School-house: A Story of the Backwoods. By Francis H. Wood.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ben: A Story of Life's Byways. By Lydia Phillips.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Secret of the Yew. By Frank Yerlock.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Major Brown; or, Whether White or Black, a Man. By Edith S. Davis.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Bell Buoy: or, The Story of a Mysterious Key. By P. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jack. A Story of a Scapegrace. By E. M. Bryant.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Hubert Ellerdale: A Tale of the Days of Wicliffe. By W. Oak Rhind.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE BRITISH GIRLS' LIBRARY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Fully Illustrated. Crown 8vo. 160 pages. Cloth extra.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Salome's Burden; or the Shadow on the Homes. By Eleanora H. Stooke.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Heroines: True Tales of Brave Women. By C. D. Michael, Author of "Well Done," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Granny's Girls. By M. B. Manwell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mousey; or, Cousin Robert's Treasure. By Eleanora H. Stooke.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marigold's Fancies. By L. E. Tiddeman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>"Our Phyllis." By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Lady of Greyham; or, Low in a Low Place. By Emma E. Hornibrook.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Gipsy Queen. By Emma Leslie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Kathleen; or, A Maiden's Influence. By Julia Hack.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Rajah's Daughter; or, The Half-Moon Girl. By Bessie Marchant.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In Self-Defence. By Julia Hack.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Regia: or, Her Little Kingdom. By E. M. Waterworth and Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Una's Marriage. By Mrs. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Tophi: An Armenian Romance. By Cecilia M. Blake.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Christabel's Influence. By J. Goldsmith Cooper.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sweet Kitty Clare. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Maid of the Storm: A Story of a Cornish Village. By Nellie Cornwall.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Queen of the Isles. By Jessie M. E. Saxby.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">"THE WORLD'S WONDERS" SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 160 pages. Copiously Illustrated. Handsome cloth covers.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Conquest of the Air: The Romance of Aerial Navigation. By John Alexander.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Surgeons and their Wonderful Discoveries. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Life-Boat: Its History and Heroes. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Firemen and their Exploits. With an Account of Fire Brigades and Appliances. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marvels of Ant Life. By W. F. Kirby, F.L.S., F.E.S., of the Natural History Museum, South Kensington.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Romance of the Savings Banks. By Archibald G. Bowie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Romance of Glass-Making: A Sketch of the History of Ornamental Glass. By W. Gandy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Romance of the Post-Office: Its Inception and Wondrous Development. By Archibald G. Bowie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marvels of Metals. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Miners and their Works Underground. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Triumphs of the Printing Press. By Walter Jerrold.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Astronomers and their Observations. By Lucy Taylor. With Preface by W. Thynne Lynn, B.A., F.R.A.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Celebrated Mechanics and their Achievements. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Engineers and their Triumphs. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Electricians and their Marvels. By Walter Jerrold.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Musicians and their Compositions. By J. R. Griffiths.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Naturalists and their Investigations. By George Day, F.R.M.S.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">POPULAR MISSIONARY BIOGRAPHIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 160 pages. Cloth extra. Fully Illustrated.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Some Missionaries I have Known. By Jesse Page F.R.G.S., Author of "Samuel Crowther," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>James Chalmers, Missionary and Explorer of Rarotonga and New Guinea. By William Robson. New Edition, brought up-to-date by Frank B. Broad, of the London Missionary Society. With recent Portrait and many other Illustrations. 176 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Griffith John, Founder of the Hankow Mission, Central China. By William Robson. New Edition, brought up-to date Dy Frank B. Broad, of the London Missionary Society. 176 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Robert Morrison: The Pioneer of Chinese Missions By Wilham J. Townsend.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Amid Greenland Snows; or, The Early History of Arctic Missions. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bishop Patteson: The Martyr of Melanesia. By same Author.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Captain Allen Gardiner: Sailor and Saint. By same Author.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Congo for Christ: The Story of the Congo Mission. By Rev. J. B. Myers, Author of "William Carey," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>David Brainerd, the Apostle to the North-American Indians. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>David Livingstone: His Labours and his Legacy. By Arthur Montefiore-Brice, Author of "H. M. Stanley," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>From Kafir Kraal to Pulpit: The Story of Tiyo Soga, First Ordained Preacher of the Kafir Race. By Rev. H. T. Cousins.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Japan: and its People. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Williams: The Martyr Missionary of Polynesia. By Rev. James Ellis.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>James Calvert; or, From Dark to Dawn in Fiji. By R. Vernon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lady Missionaries in Foreign Lands. By Mrs. E. R. Pitman, Author of "Missionary Heroines in Eastern Lands."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Missionary Heroines in Eastern Lands. By Mrs. E. R. Pitman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Reginald Heber: Bishop of Calcutta, Author of "From Greenland's Icy Mountains." By A. Montefiore-Brice, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Robert Moffat: The Missionary Hero of Kuruman. By David J. Deane.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Samuel Crowther: The Slave Boy who became Bishop of the Niger. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Thomas J. Comber: Missionary Pioneer to the Congo. By Rev. J. B. Myers.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>William Carey: The Shoemaker who became the Father and Founder of Modern Missions. By Rev. J. B. Myers.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Henry Martyn. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">NEW POPULAR BIOGRAPHIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. Cloth boards. Fully Illustrated.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Women who have Worked and Won. The Life Story of Mrs. Spurgeon, Mrs. Booth-Tucker, F. R. Havergal, and Ramabai. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Bright: Apostle of Free Trade. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Two Stephensons. By John Alexander.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>J. Passmore Edwards: Philanthropist. By E. Harcourt Burrage.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dwight L. Moody: The Life-work of a Modern Evangelist. By Rev. J. H. Batt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Noble Work by Noble Women: Sketches of the Lives of the Baroness Burdett-Coutts, Lady Henry Somerset, Miss Sarah Robinson, Mrs. Fawcett, and Mrs. Gladstone. By Jennie Chappell, Author of "Four Noble Women," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Four Noble Women and their Work: Sketches of the Life and Work of Frances Willard, Agnes Weston. Sister Dora, and Catherine Booth. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Canal Boy who became President. By Frederic T. Gammon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Florence Nightingale: The Wounded Soldiers' Friend. By Eliza F. Pollard.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Four Heroes of India: Clive, Warren Hastings, Havelock, Lawrence. By F. M. Holmes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Fridtjof Nansen: His Life and Explorations. By J. A. Bain.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>General Gordon: The Christian Soldier and Hero. By G. Barnett Smith.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>W. E. Gladstone: England's Great Commoner. By Walter Jerrold. With Portrait and 38 other Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Heroes and Heroines of the Scottish Covenanters. By J. Meldrum Dryerre, LL.B., F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Knox and the Scottish Reformation. By G. Barnett Smith.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Philip Melancthon: The Wittemberg Professor and Theologian of the Reformation. By David J. Deane.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sir Richard Tangye ("One and All"): An Autobiography. With 21 Original Illustrations by Frank Hewitt. 192 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sir John Franklin and the Romance of the North-West Passage. By G. Barnett Smith.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Slave and His Champions: Sketches of Granville Sharp, Thomas Clarkson, William Wilberforce, and Sir T. F. Buxton. By C. D. Michael.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Henry M. Stanley: The African Explorer. By Arthur Montefiore-Brice, F.G.S., F.R.G.S.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <ol class="upperalpha simple" start="3">
+      <li>
+        <ol class="first upperalpha" start="8">
+          <li>
+            <p class="first pfirst"><span>Spurgeon: His Life and Ministry. By Jesse Page, F.R.G.S.</span></p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Two Noble Lives: John Wicliffe, the Morning Star of the Reformation; and Martin Luther, the Reformer. By David J. Deane. 208 pages.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>William Tyndale: The Translator of the English Bible. By G. Barnett Smith.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Marquess of Salisbury: His Inherited Characteristics, Political Principles, and Personality. By W. F. Aitken. 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Frederick Temple, Archbishop of Canterbury. By W. Francis Aitken, Author of "Baden-Powell," etc. 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Joseph Parker, D.D.: His Life and Ministry. By Albert Dawson. 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Hugh Price Hughes. By Rev. J. Gregory Mantle, 1s. 6d. Net.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">NEW CENTURY LEADERS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold small">An up-to-date Series of Biographies of Men of Mark at the Opening of the Twentieth Century.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 160 pages and Portrait. Handsomely bound in cloth boards.<br />
+    1s. 6d. each Net.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>R. J. Campbell, M.A.; Minister of the City Temple, London. By Charles T. Bateman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dr. Barnardo: "The Foster-Father of Nobody's Children." By Rev. J. H. Batt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>W. Robertson Nicoll, LL.D., Editor and Preacher. By Jane Stoddart.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <ol class="upperalpha simple" start="6">
+      <li>
+        <ol class="first upperalpha" start="2">
+          <li>
+            <p class="first pfirst"><span>Meyer: His Life and Work. By Jennie Street.</span></p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Clifford, M.A., B.Sc., LL.D., D.D. By Chas. T. Bateman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Thirty Years in the East End: A Marvellous Story of Mission Work. By W. Francis Aitken.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Alexander Maclaren, D.D.: The Man and His Message. By Rev. John C. Carlile.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lord Milner. By W. B. Luke.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lord Rosebery: Imperialist. By J. A. Hammerton, Author of "J. M. Barrie and His Books."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Joseph Chamberlain: A Romance of Modern Politics. By Arthur Mee.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>General Booth: The Man and His Work. By Jesse Page, F.R.G.S.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">ILLUSTRATED REWARD BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 160 pages. Cloth extra. Fully Illustrated.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Bethesda Chapel. A Story of the Good Old Times. By Rev. C. Leach, D.D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Philip's Inheritance; or, Into a Far Country. By F. Spenser.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Donald's Victory. By Lydia Phillips.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Red Brick Cottage. By Lady Hope, Author of "His Handiwork," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marchester Stories. By Rev. C. Herbert.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Aileen; or, The Love of Christ Constraineth Us. By Laura A. Barter-Snow, Author of "Harold; or, Two Died for Me."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Everybody's Friend; or, Hilda Danvers' Influence. By Evelyn Everett-Green, Author of "Barbara's Brother," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In Friendship's Name. A Story for Boys. By Lydia Phillips, Author of "Frank Burleigh, etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Legend of the Silver Cup. Allegories for Children. By Rev. G. Critchley, B.A. With 12 Illustrations. Small 4to.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Nella; or, Not My Own. By Jessie Goldsmith Cooper.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sister Royal. By Mrs. Haycraft, Author of "The Children of Cherryholme," etc.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">DEVOTIONAL CLASSICS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">A new series of Devotional Books by standard authors. Well printed on<br />
+    good paper. Size 6-1/4 by 4-1/4 inches. Beautifully bound in<br />
+    cloth boards. 1s. 6d. each. Net.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Imitation of Christ. By Thomas á Kempis.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Holy War. By John Bunyan.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">PICTURE BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Size 9 by 7 inches. Coloured and numerous other Illustrations.<br />
+    Handsome Coloured Cover. Paper Boards with Cloth Back.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Happy and Gay: Pictures and Stories for Every Day. By D. J. D., Author of "Stories of Animal Sagacity." etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pleasures and Joys for Girls and Boys. By D. J. D., Author of "Stories of Animal Sagacity."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Anecdotes of Animals and Birds. By Uncle John.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Stories of Animal Sagacity. By D. J. D. A companion volume to "Anecdotes of Animals."</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">"ONWARD" TEMPERANCE LIBRARY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. Illustrated. Cloth extra.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dick's Chum. By Miss M. A. Paull.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>We Girls. By Miss M. A. Paull.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Fortunes of Riverside. By S. Hocking.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Blossom and Blight. By Miss M. A. Paull, Author of "Tim's Troubles," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Manor House Mystery. By Mrs. C. L. Balfour.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Bird Angel. By Miss M. A. Paull.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Running from Home. By Miss M. A. Paull.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lyndon the Outcast. By Mrs. Clara Lucas Balfour.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ronald Clayton's Mistake. By Miss M. A. Paull.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Nearly Lost, but Dearly Won. By Rev. T. P. Wilson, M.A., Author of "Frank Oldfield," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Saph's Foster-Bairn. By Rev. A. Colbeck, Author of the £100 prize tale, "Fall of the Staincliffes," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Hoyle's Popular Ballads and Recitations. By William Hoyle, Author of "Hymns and Songs," etc.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">1s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">"ONWARD" TEMPERANCE LIBRARY.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. Illustrated. Cloth extra.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Western Waif. By Old Cornish, Author of "Ste," "Our Girls," "Pete and his Daddy," etc., etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Addy's Two Lives. By Mrs. Ruth B. Yates, Author of "Grumpy Grafton," "Green and Gold," etc., etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Dudley's Secret; or, The Gambler's Daughter. By Edward Armytage.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Suspected; or, Under a Cloud. By A. J. Glasspool, Author of "Snatched from Death," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Whispers to those who wish to Enjoy a Happy Life. By Rev. Benj. Smith, Author of "Climbing," "Gems Reset," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Snatched from Death. By Alfred J. Glasspool, Author of "The Young Abstainer's Laboratory," etc., etc.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">1s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">ONE SHILLING REWARD BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Fully Illustrated. Crown 8vo. Cloth extra.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>"Other Pets and their Wild Cousins. By Rev. J. Isabell, F.E.S. Many Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Little Chris the Castaway. By F. Spenser.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Children of the Priory. By J. L. Hornibrook.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Through Sorrow and Joy; or, The Story of an English Bible in Reformation Times. By M. A. R.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Tom and the Enemy. By Clive R. Fenn.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ruth's Roses: or, What Some Girls Did. By Laura A. Barter-Snow. Four Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>In Paths of Peril: A Boy's Adventures in Nova Scotia. By J. Macdonald Oxley. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pets and their Wild Cousins: New and True Stories of Animals. By Rev. J. Isabell, F.E.S. Twenty Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Brother's Need. By L. S. Mead. Crown 8vo. 128 pages. Illustrated. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sunshine and Snow. By Harold Bindloss. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Donalblane of Darien. By J. Macdonald Oxley. Six Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Crown Jewels. By Heather Grey. Four Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>At the Bend of the Creek. By E. Gertrude and Annie A. Hart. Four Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>All Play and No Work. By Harold Avery, Author of "The Triple Alliance," etc. Six Illustrations by Harold Copping.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bernard or Ben? By Jennie Chappell, Author of "Raymond's Rival," etc. Six Illustrations by T. L. Pethybridge.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Always Happy; or, The Story of Helen Keller. By Jennie Chappell, Author of "Ted's Trust."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Birdie and her Dog, and other Stories of Canine Sagacity. By Miss Phillips (Mrs. H. B. Looker).</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bessie Drew; or, The Odd Little Girl. By Amy Manifold.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cola Monti; or, The Story of a Genius. By Mrs. Craik, Author of "John Halifax, Gentleman."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Children of Cherryholme. By M. S. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Fatal Nugget. By E. Harcourt Burrage.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Frank Burleigh; or, Chosen to be a Soldier. By Lydia Phillips.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Harold; or, Two Died for Me. By Laura A. Barter.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Indian Life in the Great North-West. By Egerton R. Young, Missionary to the North American Indian Tribes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jack the Conqueror; or, Difficulties Overcome. By the Author of "Dick and his Donkey."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jim's Discovery; or, On the Edge of a Desert. By T. M. Browne, Author of "Dawson's Madge," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Bunch's Charge; or, True to Trust. By Nellie Cornwall, Author of "Tamsin Rosewarne," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lost in the Backwoods. By Edith C. Kenyon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Little Woodman and his Dog Caesar. By Mrs. Sherwood.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marjory; or, What would Jesus do? By Laura A. Barter-Snow.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Den. By E. M. Waterworth, Author of "Master Lionel, that Tiresome Child."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Paul the Courageous. By Mabel Quiller-Couch. Six Illustrations by Florence Reason.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Roy's Sister; or, His Way and Hers. By M. B. Manwell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Raymond's Rival; or, Which will Win? By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>St. Mary's Convent; or, Chapters in the Life of a Nun. By J. S. Dammast, Author of "The Fatal Legacy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sweet Nancy. By L. T. Meade, Author of "Scamp and I."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Uncle Zeph and His Yarns. By Wm. J. Forster, Author of "A Trip to Many Lands," etc. Four Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Who was the Culprit? By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Partridge's Popular Reciter. Old Favourites and New. Cloth Boards, 1s. Net.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>"Golden Words for Every Day. By M. Jennie Street. A prettily illustrated Text Book for the Young.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Armour of Life. A Little Book of Friendly Counsel. Edited by J. A. Hammerton, Author of "A Young Man's Mind." Foolscap 8vo. Ninety-six pages. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Hiram Golf's Religion. By George H. Hepworth, D.D,, Author of "The Life Beyond." etc. 128 pages. Cloth gilt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Eon the Good; and other Verses. By Charlotte Murray. Crown 8vo.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>What is Christian Science? An Examination of the Metaphysical, the Theological, and the Therapeutic Theories of the System. By P. C. Wolcott, B.D. Long 8vo. 96 pages. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Another Pentecost. By Rev. I. E. Page. Long 8vo. 128 pages. Cloth boards.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Uncrowned Queens. By Charlotte Skinner, Author of "Sisters of the Master." Small 8vo. 112 pages. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sisters of the Master. By Charlotte Skinner, Author of "The Master's Gifts to Women."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Light and Darkness; or, All One in Christ Jesus. By Spes. An Anti-Ritualistic Story. Crown 8vo. 128 pages. Paper covers.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Molly and I. By the Author of "Jack," "At Sunset," etc. Long 8vo. Illustrated Title Page.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cicely's Little Minute. By Harvey Gobel. Long 8vo. Illustrated Title Page. Cloth extra.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Victoria: the Well-Beloved. (1819-1901.) By W. Francis Aitken, Author of "Baden Powell: the Hero of Mafeking." Eight illustrations. Crown 8vo. 152 pages. Cloth boards.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">CHEAP REPRINTS OF POPULAR BOOKS FOR THE YOUNG.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Crown 8vo. 160 pages. Illustrated. Cloth boards, 1s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Satisfied. By Catherine Trowbridge.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Ted's Trust; or, Aunt Elmerley's Umbrella. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*A Candle Lighted by the Lord. By Mrs. E. Ross.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Alice Western's Blessing. By Ruth Lamb.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Tamsin Rosewarne and Her Burdens: A Tale of Cornish Life. By Nellie Cornwall.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Raymond and Bertha: A Story of True Nobility. By Lydia Phillips, Author of "Frank Burleigh; or, Chosen to be a Soldier."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Gerald's Dilemma. By Emma Leslie. Crown 8vo. 160 pages. Six Illustrations. Cloth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Fine Gold; or, Ravenswood Courtenay. By Emma Marshall, Author of "Eaglehurst Towers," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Marigold. By Mrs. L. T. Meade, Author of "The Little Princess of Tower Hill," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jack's Heroism. A Story of Schoolboy Life. By Edith C. Kenyon.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Lads of Kingston. A Tale of a Seaport Town. By James Capes Story.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Her Two Sons: A Story for Young Men and Maidens. By Mrs. Charles Garnett.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Rag and Tag: A Plea for the Waifs and Strays of Old England. By Mrs. E. J. Whittaker.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Through Life's Shadows. By Eliza F. Pollard, Author of "Roger the Ranger."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Little Princess of Tower Hill. By L. T. Meade, Author of "The Lady of the Forest."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Clovie and Madge. By Mrs. G. S. Reaney.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ellerslie House: A Book for Boys. By Emma Leslie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Like a Little Candle; or, Bertrand's Influence. By Mrs. Haycraft.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Martin Redfern's Vow. By Ethel F. Heddle.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Dairyman's Daughter. By Legh Richmond.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Wonders. By Rev. Dr. Newton.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Pilgrim's Progress. By John Bunyan. 416 pages. Forty-seven Illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Duty to Animals. By Mrs. C. Bray, Author of "Physiology for Schools," etc. Intended to teach the young kindness to Animals.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">NEW SERIES OF ONE SHILLING PICTURE BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><em class="italics small">Size 10-1/2 by 8 inches. 96 pages. Coloured Frontispiece and numerous other illustrations. Handsomely bound in paper boards, covers printed in 10 colours and varnished.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Tell Me a Tale! A Picture Story Book for Little Children. By J. D., Author of "Two Little Bears at School," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Little Snow-Shoes' Picture Book. By R. V., Author of "Merry and Free."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*In Animal Land with Louis Wain. Coloured frontispiece and many other of Louis Wain's striking animal pictures for the young.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Two Little Bears at School. By J. D., Author of "Happy Playmates," "Buttercups and Daisies," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Merry and Free. Pictures and Stories for our Little Ones. By R. V.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>We Three and Grandpa! A Picture Story Book for Little Folks. By J. D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bruno's Prize. Pictures and Stories for Merry and Wise. By D. J. D., Author of "Our Pets' Picture Book."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Pets' Picture Book. By D. J. D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Happy Playmates: Pictures and Stories for Little Folks. By J. D., Author of "Buttercups and Daisies," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Pictures and Stories: Old Testament. By D. J. D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bible Pictures and Stories: New Testament. By James Weston and D. J. D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pussies and Puppies. By Louis Wain.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Life of Jesus. 112 pages. Coloured frontispiece and many other illustrations.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Gentle Jesus: A Book of Bible Pictures in colour. Size, 11 by 8 inches.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">ONE SHILLING TOY BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Father Time. A Novel Mechanical Toy Book. Cover tastefully printed in colours. Contains beautifully reproduced illustrations of the games played during each month of the year; also clock-dial with real hands.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Animals, Tame and Wild. Fourteen coloured pages of Animals drawn from life, with appropriate footlines. Beautifully coloured cover, varnished.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">BOOKS FOR CHRISTIAN WORKERS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Large Crown 16mo. 128 pages. Chastely bound, in Cloth Boards.<br />
+    1s. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Some Secrets of Christian Living. By Rev. F. B. Meyer.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Overcoming Life. By Rev. E. W. Moore.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Marks of the Master. By Charlotte Skinner.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Some Deeper Things. By Rev. F. B. Meyer.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Steps to the Blessed Life. By Rev. F. B. Meyer.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Daybreak in the Soul. By Rev. E. W. Moore.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Temptation of Christ. By C. Arnold Healing, M.A.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Keynotes to the Happy Life. By Charlotte Skinner, Author of "The Master's Gifts to Women," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>For Love's Sake. By Charlotte Skinner, Author of "Uncrowned Queens," etc.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">9d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">NINEPENNY SERIES OF ILLUSTRATED BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">96 pages. Small Crown 8vo. Illustrated. Handsome cloth covers.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Bob and Bob's Baby. By Mary E. Lester.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Robin's Golden Deed. By Ruth Lynn.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*The Little Captain: A Temperance Tale. By Lynde Palmer.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Grandmother's Child. By Annie S. Swan. New Edition.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dorothy's Trust. By Adela Frances Mount, Author of "Margery's Quest."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Grannie's Treasures; and how they helped her. By L. E. Tiddeman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>His Majesty's Beggars. By Mary E. Ropes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Love's Golden Key. By Mary E. Lester.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Faithful Friends. By C. A. Mercer, Author of "Rob and I."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Only Roy. By E. M. Water worth and Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Aunt Armstrong's Money. By Jennie Chappell, Author of "Carol's Gift," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Babes in the Basket; or, Daph and Her Charge.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bel's Baby. By Mary E. Ropes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Birdie's Benefits; or, A Little Child Shall Lead Them. By Edith Ruth Boddy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Carol's Gift; or, "What Time I am Afraid I will Trust in Thee." By Jennie Chappell, Author of "Without a Thought."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cripple George; or, God has a Plan for Every Man. A Temperance Story. By John W. Kneeshaw.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cared For; or, The Orphan Wanderers. By Mrs. C. E. Bowen, Author of "Dick and his Donkey," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dawson's Madge: or, The Poacher's Daughter. By T. M. Browne, Author of "The Musgrove Ranch," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Flight with the Swallows, By Emma Marshall.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Five Cousins. By Emma Leslie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Foolish Chrissy; or, Discontent and its Consequences. By Meta, Author of "Noel's Lessons," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>For Lucy's Sake. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Giddie Garland; or, The Three Mirrors. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>How a Farthing Made a Fortune; or, Honesty is the Best Policy. By Mrs. C. E. Bowen.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>How Paul's Penny became a Pound. By Mrs. Bowen, Author of "Dick and his Donkey."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>How Peter's Pound became a Penny. By the same Author.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Blessington's Enemy: A Story of Life in South Africa. By E. Harcourt Burrage, Author of "The Fatal Nugget," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Oriel's Start in Life. By Mary Howitt.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Master Lionel, that Tiresome Child. By E. M. Waterworth.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Man of the Family. By Jennie Chappell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mattie's Home; or, The Little Match-girl and her Friends.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Nan; or, The Power of Love. By Eliza F. Pollard, Author of "Avice," etc.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Phil's Frolic. By F. Scarlett Potter.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Paul: A Little Mediator. By Maude M. Butler.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Rob and I; or, By Courage and Faith. By C. A. Mercer.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Sailor's Lass. By Emma Leslie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Una Bruce's Troubles. By Alice Price.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Won from the Sea. By E. C. Phillips (Mrs. H. B. Looker), Author of "Birdie and Her Dog."</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">6d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">NEW SERIES OF SIXPENNY PICTURE BOOKS.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><em class="italics small">Crown quarto. With Coloured Frontispiece and many other illustrations. Handsomely bound in paper boards, with cover printed in ten colours.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Old Mother Bunnie! A Picture Story Book for Laddies and Lassies. By J. D.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Off We Go! Pictures and Stories for Boys and Girls. By R. V.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sweet Stories Retold: A Bible Picture Book for Young Folks.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Snowdrop's Bible Picture Book.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>March Away! Pictures and Stories for Every Day.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>After the Ball: Pictures and Stories for One and All.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE MARIGOLD SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><em class="italics small">An unequalled series of Standard stories, printed on good laid paper. Imperial 8vo. 128 pages. Illustrated covers with vignetted design printed in eight Colours. Price 6d. each net.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Pride and Prejudice. By Jane Austen.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>From Jest to Earnest. By E. P. Roe.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Wide, Wide World. By Susan Warner.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">POPULAR EDITION.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Don Lavington; or, In the Days of the Press Gang. By Geo. Manville Fenn. Royal 8vo. 160 pages. Ten Illustrations by W. Rainey. R.I. Cover printed in colours.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE "RED DAVE" SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">New and enlarged Edition. Handsomely bound in cloth boards.<br />
+    Well illustrated.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Roy Carpenter's Lesson. By Keith Marlow.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Gerald's Guardian. By Charles Herbert.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>*Where a Queen once Dwelt. By Jetta Vogel.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wilful Jack. By M. I. Hurrell.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Willie the Waif. By Minie Herbert.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Sunday Trip and what came of it. By E. J. Romanes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Tim and his Picture. By Beatrice Way.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Midge. By L. E. Tiddeman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Conjurer's Wand. By Henrietta S. Streatfeild.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Benjamin's New Boy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Enemies: A Tale for Little Lads and Lasses.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cherry Tree Place.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Tale of Four Foxes.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Little Town Mouse.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Little Governess.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Puppy-Dog Tales.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mother's Boy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Great Mistake.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>From Hand to Hand.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>That Boy Bob.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Buy Your Own Cherries.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Left in Charge, and other Stories.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Threefold Promise.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Four Young Musicians.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Two Little Girls and What they did.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Joe and Sally; or, A Good Deed and its Fruits.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Island Home.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Chrissy's Treasure.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lost in the Snow.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Owen's Fortune.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Red Dave: or, What Wilt Thou have Me to Do.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dick and His Donkey.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jessie Dyson.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Come Home, Mother.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">4d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">CHEAP "PANSY" SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><em class="italics small">Imperial 8vo. 64 pages. Many Illustrations. Cover printed in five colours.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Strait Gate. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Mark Desborough's Vow. By Annie S. Swan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Her Saddest Blessing.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Miss Priscilla Hunter, and other Stories.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wild Bryonie.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Avice. A Story of Imperial Rome.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Links in Rebecca's Life.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>From Different Standpoints.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Those Boys.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Christie's Christmas.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Four Girls at Chautauqua.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Julia Ried.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ester Ried yet Speaking.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Echoing and Re-echoing.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Cunning Workmen.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Tip Lewis and His Lamp.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The King's Daughter.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Household Puzzles.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Randolphs.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Wise to Win; or, The Master Hand.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A New Graft on the Family Tree.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Man of the House.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">THE YOUNG FOLKS' LIBRARY</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">of Cloth-bound Books. With Coloured Frontispiece. 64 pages.<br />
+    Well Illustrated. Handsome Cloth Covers.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Little Woodman.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jacko the Monkey, and other Stories.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Dan, the Orange Boy.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Ronald's Reason.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Prom Shadow to Sunshine.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Bright Idea.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Sybil and her Live Snowball.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Church Mouse.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dandy Jim.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Troublesome Trio.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Perry's Pilgrimage.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Nita; or, Among the Brigands.</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><em class="bold italics large">3d. each.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span class="bold">NEW PRETTY "GIFT-BOOK" SERIES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><em class="italics small">With Beautiful Coloured Frontispiece, and many other Illustrations. Paper boards, Cover printed in eight Colours and Varnished, 3d. each. Size 6 by 5 inches.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Jack and Jill's Picture Book.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Lady-Bird's Pictures and Stories.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Playtime Joys for Girls and Boys</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Dolly's Picture Book.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>By the Sea.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Toby and Kit's Animal Book.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>"Pets "and "Pickles."</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Little Pets' Alphabet.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Blble Stories--Old Testament.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Blble Stories--New Testament.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">TINY LIBRARY</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="center pfirst"><em class="italics small">Books printed in large type. Cloth limp, 3d.</em></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Chrissie, and other Stories.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Harry Carlton's Holiday.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>A Little Loss and a Big Find.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>What a Little Cripple Did.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Bobby.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Matty and Tom.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Broken Window.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>John Madge's Cure for Selfishness.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Pedlar's Loan.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Letty Young's Trials.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Brave Boys.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Little Jim, the Rag Merchant.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span class="bold">PARTRIDGE'S PICTORIAL MAGAZINES.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>Our Young Men. A Magazine of Manliness. Edited by J. A. Hammerton. A thoroughly bright, breezy, go-ahead magazine, with attractive articles, serial stories, answers to correspondents, book chat, etc., etc. 1d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, cloth boards, 2s.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The British Workman. Contains Popular Articles and Stories on Temperance, Thrift, etc., and short Biographies of eminent Self-made Men; also interesting information of special value to the sons of toil. 1d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, 144 pages full of Illustrations, coloured paper boards, 1s. 6d.; cloth, 2s. 6d.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Family Friend. A beautifully Illustrated Magazine for the Home Circle, with Serial and Short Stories by popular Authors, Helpful Articles, Hints on Dressmaking, etc. 1d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, in coloured paper boards and cloth back, 1s. 6d.; cloth, 2s.; gilt edges, 2s. 6d.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Friendly Visitor. An Illustrated Gospel Magazine for the people full of entertaining reading with sound religious teaching in the form of story, article, and poem. Printed in large type and fully illustrated. Just the paper for the aged. 1d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, coloured paper boards and cloth back, 1s. 6d.; cloth, 2s.; gilt edges, 2s. 6d.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Children's Friend. Charming Stories, interesting Articles, Indoor Recreations, beautiful Pictures, Puzzles, Prize Competitions, etc. 1d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, coloured paper boards, with cloth back and excellent coloured frontispiece, 1s. 6d.; cloth, 2s.; gilt edges, 2s. 6d.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Infants' Magazine. No other Periodical can be compared with the Infants' Magazine for freshness, brightness, and interest. Full of bright pictures and pleasant reading to delight the little ones. ld. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, coloured paper boards, with cloth back and beautifully coloured frontispiece, 1s. 6d.; cloth, 2s.; gilt edges, 2s. 6d.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Band of Hope Review. The Leading Temperance Periodical for the Young, containing Serial and Short Stories. Concerted Recitations, Prize Competitions. Should be in the hands of all Members of Bands of Hope. 1/2d. Monthly.</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="pfirst"><span>The Yearly Volume, coloured paper boards, 1s.; cloth boards 1s. 6d.</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
